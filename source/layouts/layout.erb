@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <title><%= current_page.data.title || "Derek Conjar builds websites" %></title>
+    
+    <%= stylesheet_link_tag "all" %>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body class="<%= page_classes %>">
+
+    <nav class="navbar navbar-inverse navbar-primary">
+      <a class="navbar-brand navbar-logo" href="/">
+        D
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-calendar"></span>
+              Blog Archives
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-user"></span>
+              About Me
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-earphone"></span>
+              Contact Me
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-envelope"></span>
+              Subscribe to Updates
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+      
+    </footer>
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<% wrap_layout :layout do %>
+
+        <div class="clearfix">
+            <div class="col-content">
+                <div class="container container-narrow content">
+                    <%= yield %>
+                </div>
+            </div>
+
+            <div class="col-sidebar">
+                <div class="col-sidebar-inner">
+                    <div class="widget">
+                        <h2 class="widget-heading">Popular Posts<h2>
+                        <h3 class="widget-subheading">Site Speed, Web App Complexity, and Other Quanderies</h3>
+                        <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase.</p>
+
+                        <h3 class="widget-subheading">Port of the Bootstrap and Foundation Components to Inuit.css</h3>
+                        If all the batteries are included (but optional), there’s no reason not to use the BEM / OOCSS / SMACSS goodness of Inuit.</p>
+
+                        <h3 class="widget-subheading">Use Rails Dammit</h3>
+                        <p>Leaning on third party services is too rigid. If I want something as simple as password reset funtionality, I’m shit outta luck.</p>
+
+                        <h3 class="widget-subheading">Avoid Wheel-Reinventing</h3>
+                        <p>Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
+
+                        <h3 class="widget-subheading">Vim vs. Emacs is Like Chrome vs. Firefox</h3>
+                        <p>I prefer the better text editor over the more extendible one. And how about that emacs learning curve?</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<% end %>

@@ -1,0 +1,19 @@
+.navbar-primary {
+    background: $brand-primary;
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar-primary .navbar-logo {
+    margin: 4px;
+    padding: 6px 12px 6px;
+    font-family: $font-family-serif;
+    background: darken($brand-primary, 10%);
+    text-decoration: none;
+}
+
+.navbar-primary .nav a {
+    text-decoration: none;
+    font-size: 0.8em;
+}

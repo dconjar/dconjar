@@ -1,0 +1,16 @@
+<a href="https://news.ycombinator.com/submitlink?u=<%= current_page.path %>&t={{ page.title | encode }}" class="btn btn-default btn-social-sharing" target="_blank">
+    <span class="icon-hacker-news">Y</span>
+    Submit to Hacker News
+</a>
+<a href="http://twitter.com/home/?status={{ page.title | encode }} - {{ site.url }}{{ page.url | replace:'index.html','' }} via @dconjar" class="btn btn-default btn-social-sharing" target="_blank">
+    <img src="../images/logo-twitter.svg" class="icon-twitter" width="23" height="19">
+    Tweet
+</a>
+<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url | replace:'index.html','' }}" class="btn btn-default btn-social-sharing" target="_blank">
+    <img src="../images/logo-gplus.svg" class="icon-gplus" width="23" height="23">
+    Google +1
+</a>
+<a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url | replace:'index.html','' }}&t={{ page.title | encode }}" class="btn btn-default btn-social-sharing" target="_blank">
+    <img src="../images/logo-facebook.svg" class="icon-facebook" width="23" height="23">
+    Like
+</a>
