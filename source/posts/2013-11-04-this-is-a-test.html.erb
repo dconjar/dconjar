@@ -7,7 +7,12 @@ excerpt: "Let me make this easy for you: If you're building a static website, yo
 build it with <a href="http://middlemanapp.com">Middleman</a>, and you want to deploy it 
 to <a href="http://pages.github.com">Github Pages</a>.</blockquote>
 
-<img src="/images/bg-table-top.jpg" class="img-responsive">
+<figure>
+    <img src="/images/bg-table-top.jpg" class="img-responsive">
+    <figcaption class="caption">
+        Explicabo ipsa quis delectus delectus iusto ut illo accusantium
+    </figcaption>
+</figure>
 
 <hr>
 
@@ -18,7 +23,9 @@ in the <a href="https://github.com/neo/middleman-gh-pages">middleman-gh-pages</a
 make deployment a breeze. While the preceding links cover the &quot;how&quot;, the rest 
 of this post will cover the &quot;why&quot;.</p>
 
-<p><strong>Middleman is a static site generator.</strong> This just means that rather than you 
+<h3>Middleman is a static site generator.</h3> 
+
+<p>This just means that rather than you 
 manually writing each line of HTML, CSS, and JavaScript, the tool writes some 
 of them for you based on the source you provide. Perhaps you want to write your 
 pages in Markdown, or your CSS using SASS. Perhaps you want to avoid 
@@ -35,13 +42,26 @@ is no database layer or framework code, static sites will always be more
 secure, performant, and portable. Your site will fly, and hosting will be cheap 
 or free.</p>
 
+<% highlight_helper("ruby") do %>
+# Enable the official Middleman blogging extension
+activate :blog do |blog|
+  blog.paginate = true
+  blog.page_link = "p:num"
+  blog.per_page = 20
+  blog.permalink = ":title/"
+  blog.sources = "posts/:year-:month-:day-:title.html"
+end
+<% end %>
+
 <p>Perhaps one of the best-known static site generators is 
 <a href="https://github.com/mojombo/jekyll">Jekyll</a>. It&#39;s been around a while and is an 
 excellent blogging platform. <strong>Think of Middleman as Jekyll on steroids.</strong> 
 While blogging isn&#39;t front-and-center on the Middleman site, blogging is 
 <a href="http://middlemanapp.com/blogging/">well-supported and documented</a>.</p>
 
-<p><strong>Middleman embraces Rails conventions.</strong> Many of the functions of a static 
+<h3>Middleman embraces Rails conventions.</h3> 
+
+<p>Many of the functions of a static 
 site generator are already handled by web application frameworks like Rails. 
 Why reinvent the wheel and make me learn a new way of doing the same thing? 
 Middleman pulls in the best bits of the Rails front end. The Rails asset 
@@ -52,7 +72,9 @@ template language you prefer (HAML, Slim, etc.). It also pulls in many Rails
 view helpers for even more convenience. If you&#39;ve ever built a Rails app, 
 you&#39;ll be right at home with Middleman.</p>
 
-<p><strong>Middleman is powerful and extensible.</strong> A &quot;static site&quot; in this context is 
+<h3>Middleman is powerful and extensible.</h3> 
+
+<p>A &quot;static site&quot; in this context is 
 really a misnomer. Middleman is perfect for building interactive and dynamic 
 client-side apps, too. If I&#39;d known about Middleman when we built 
 <a href="http://iwitness.adaptivepath.com">iWitness</a>, a complex client-side Ember app, 
@@ -63,6 +85,88 @@ it&#39;s easily extendable for things such as <a href="https://github.com/middle
 compression</a>, <a href="https://github.com/middleman/middleman-syntax">syntax 
 highlighting</a>, and 
 <a href="http://middlemanapp.com/community/3rd-party-extensions/">more</a>.</p>
+
+<table class="table">
+  <tbody>
+    <tr class="titles">
+            <td class="symbol">Symbol</td>
+            <td class="company">Company</td>
+            <td class="amount">Amount</td>
+            <td class="yield">Yield</td>
+            <td class="exdate">Ex-Date</td>
+        </tr><!-- titles -->
+        <tr>
+            <td class="symbol">SDT</td>
+            <td class="company">SandRidge Mississippian Trust I</td>
+            <td class="amount">$0.6029</td>
+            <td class="yield">19.57%</td>
+            <td class="exdate">11/12/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">SDR</td>
+            <td class="company">Sandridge Mississippian Trust II</td>
+            <td class="amount">$0.5360</td>
+            <td class="yield">18.64%</td>
+            <td class="exdate">11/12/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">PER</td>
+            <td class="company">SandRidge Permian Trust</td>
+            <td class="amount">$0.6520</td>
+            <td class="yield">18.23%</td>
+            <td class="exdate">11/12/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">JMI</td>
+            <td class="company">JAVELIN Mortgage Investment Corp.</td>
+            <td class="amount">$0.1500</td>
+            <td class="yield">15.16%</td>
+            <td class="exdate">11/13/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">ARR</td>
+            <td class="company">ARMOUR Residential REIT, Inc.</td>
+            <td class="amount">$0.0500</td>
+            <td class="yield">14.56%</td>
+            <td class="exdate">11/13/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">OAKS</td>
+            <td class="company">Five Oaks Investment Corp.</td>
+            <td class="amount">$0.1250</td>
+            <td class="yield">12.63%</td>
+            <td class="exdate">11/13/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">FSC</td>
+            <td class="company">Fifth Street Finance Corp.</td>
+            <td class="amount">$0.0958</td>
+            <td class="yield">11.27%</td>
+            <td class="exdate">11/13/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">HRZN</td>
+            <td class="company">Horizon Technology Finance Corporation</td>
+            <td class="amount">$0.1150</td>
+            <td class="yield">10.24%</td>
+            <td class="exdate">11/15/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">GAIN</td>
+            <td class="company">Gladstone Investment Corporation</td>
+            <td class="amount">$0.0600</td>
+            <td class="yield">10.18%</td>
+            <td class="exdate">11/12/2013</td>
+        </tr>
+        <tr>
+            <td class="symbol">GLAD</td>
+            <td class="company">Gladstone Capital Corporation</td>
+            <td class="amount">$0.0700</td>
+            <td class="yield">9.52%</td>
+            <td class="exdate">11/12/2013</td>
+        </tr>
+  </tbody>
+</table>
 
 <p>When it comes time to deploy your Middleman site -- or any static site for that 
 matter -- you have endless options. Any web host in the world can host a static 

@@ -25,7 +25,7 @@
 # end
 
 page "*", :layout => :two_columns
-
+page "/feed.xml", :layout => false
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -50,10 +50,24 @@ activate :automatic_image_sizes
 # Reload the browser automatically whenever files change
 activate :livereload
 
+# You can't have <code> without syntax highlighting!
+activate :syntax
+
 # Methods defined in the helpers block are available in templates
 helpers do
-  def the_permalink
+  def permalink_helper
     "http://derekconjar.com/" + current_page.path.gsub("index.html", "")
+  end
+
+  def highlight_helper(language=nil, container_width=nil, &block)
+    if container_width.is_a?(Numeric)
+      concat_content "<style> .highlight { width: #{container_width}px; }</style>"
+    end
+    
+    concat_content '<div class="highlight-container">'
+    concat_content '<small class="highlight-language">'+language+'</small>'
+    code(language, &block)
+    concat_content '</div>'
   end
 end
 

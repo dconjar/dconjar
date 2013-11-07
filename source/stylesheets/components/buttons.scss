@@ -1,0 +1,25 @@
+.btn {
+    text-decoration: none;
+}
+
+.btn-social-sharing {
+    font-size: 0.7em;
+    font-family: $font-family-sans-serif;
+    padding: 7px 6px;
+    margin-right: 10px;
+    height: 36px;
+    text-decoration: none;
+}
+
+.btn-social-sharing-icon {
+    margin-bottom: 3px;
+}
+
+/* Use by placing a "Y" in a container with the class */
+.btn-social-sharing-icon-hacker-news {
+    background: #fff;
+    color: #68AA53;
+    padding: 2px 6px;
+    border: 1px solid #fff;
+    font-family: Verdana, sans-serif;
+}

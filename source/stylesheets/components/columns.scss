@@ -1,17 +1,8 @@
 .col-content {
-    width: 67%;
     padding: 1em;
-    float: left;
+    border-right: 1px solid $gray-lighter;
 }
 
 .col-sidebar {
-    width: 33%;
     padding: 1em;
-    float: right;
-    border-left: 1px solid $gray-lighter;
-}
-
-.col-sidebar-inner {
-    max-width: 360px;
-    margin: 0 auto;
 }

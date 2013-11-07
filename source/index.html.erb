@@ -2,28 +2,30 @@
 title: Derek Conjar, Builder of Websites
 ---
 
-<div class="content">
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
 
-  <% if paginate && num_pages > 1 %>
-    <p>Page <%= page_number %> of <%= num_pages %></p>
-
-    <% if prev_page %>
-      <p><%= link_to 'Previous page', prev_page %></p>
-    <% end %>
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
+<% end %>
 
-  <% page_articles.each_with_index do |article, i| %>
-    <h2 class="heading-primary">
-      <%= link_to article.title, article %>
-    </h2>
-    <%= article.body %>
-    <%= partial "partials/social-sharing-buttons" %>
-  <% end %>
+<% page_articles.each_with_index do |article, i| %>
+  <h2 class="heading-primary">
+    <%= link_to article.title, article %>
+  </h2>
+  <%= article.body %>
+  <%= partial "partials/social-sharing-buttons" %>
+<% end %>
 
-  <% if paginate %>
-    <% if next_page %>
-      <p><%= link_to 'Next page', next_page %></p>
-    <% end %>
-  <% end %>
+<hr>
 
+<div class="comments">
+  <div id="disqus_thread"></div>
 </div>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

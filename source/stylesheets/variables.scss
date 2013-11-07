@@ -40,8 +40,8 @@ $link-hover-color:      darken($link-color, 15%);
 // -------------------------
 
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       "ff-tisa-web-pro", Georgia, Times, serif;
-$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-serif:       Georgia, Times, serif;
+$font-family-monospace:   Courier, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          20px;
@@ -211,13 +211,13 @@ $zindex-modal:             1050;
 
 // Extra small screen / phone
 // Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
-$screen-xs:                  480px;
+$screen-xs:                  360px;
 $screen-xs-min:              $screen-xs;
 $screen-phone:               $screen-xs-min;
 
 // Small screen / tablet
 // Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
-$screen-sm:                  768px;
+$screen-sm:                  480px;
 $screen-sm-min:              $screen-sm;
 $screen-tablet:              $screen-sm-min;
 
@@ -245,9 +245,9 @@ $screen-md-max:              ($screen-lg-min - 1);
 // Number of columns in the grid system
 $grid-columns:              12;
 // Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px;
+$grid-gutter-width:         0px;
 // Point at which the navbar stops collapsing
-$grid-float-breakpoint:     $screen-sm-min;
+$grid-float-breakpoint:     $screen-md-min;
 
 
 // Navbar

@@ -1,0 +1,22 @@
+// Import syntax highlighting CSS from Rouge
+<%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
+
+.highlight-container {
+    overflow-x: auto;
+    background: $gray-lighter;
+    border-radius: 4px;
+}
+
+.highlight-language {
+    font-weight: bold;
+    padding: 0 0 0 8px;
+    display: block;
+    font-size: 0.8em;
+    color: $gray-light;
+    text-transform: uppercase;
+}
+
+.highlight {
+    font-size: 0.8em;
+    border-radius: 0;
+}
