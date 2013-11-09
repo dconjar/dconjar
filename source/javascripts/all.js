@@ -12,3 +12,9 @@
 //= require bootstrap/popover
 
 //= require_tree .
+
+
+$(document).ready(function(){
+    addScrollingCodeBlocks();
+    enableDisqusComments();
+});

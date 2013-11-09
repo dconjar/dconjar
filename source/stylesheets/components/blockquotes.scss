@@ -1,6 +1,12 @@
 blockquote {
-    border: 3px solid $brand-primary;
-    padding: 1em;
-    font-style: italic;
-    margin: 2em 0;
+    border: 3px solid $brand-info;
+    color: #555;
+    padding: 0.5em 0.6em;
+    margin: 1em 0;
+
+    p {
+        font-size: 0.9em;
+        line-height: 1.6em;
+        margin: 0;
+    }
 }

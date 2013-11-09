@@ -1,15 +1,12 @@
 .navbar-primary {
-    background: $brand-primary;
+    background: $brand-info;
     border-radius: 0;
     border: 0;
     margin-bottom: 0;
 
     .navbar-logo {
-        margin: 4px;
-        padding: 8px 14px 5px;
-        font-family: $font-family-monospace;
-        background: darken($brand-primary, 10%);
         text-decoration: none;
+        margin-left: 15px;
     }
 
     .nav a {

@@ -23,6 +23,26 @@ in the <a href="https://github.com/neo/middleman-gh-pages">middleman-gh-pages</a
 make deployment a breeze. While the preceding links cover the &quot;how&quot;, the rest 
 of this post will cover the &quot;why&quot;.</p>
 
+<% highlight_helper("ruby") do %>
+# Methods defined in the helpers block are available in templates
+helpers do
+  def permalink_helper
+    "http://derekconjar.com/" + current_page.path.gsub("index.html", "")
+  end
+
+  def highlight_helper(language=nil, container_width=nil, &block)
+    if container_width.is_a?(Numeric)
+      concat_content "<style> .highlight { width: #{container_width}px; }</style>"
+    end
+    
+    concat_content '<figure class="highlight-container">'
+    concat_content '<figcaption class="highlight-language">'+language+'</figcaption>'
+    code(language, &block)
+    concat_content '</figure>'
+  end
+end
+<% end %>
+
 <h3>Middleman is a static site generator.</h3> 
 
 <p>This just means that rather than you 
@@ -43,13 +63,30 @@ secure, performant, and portable. Your site will fly, and hosting will be cheap
 or free.</p>
 
 <% highlight_helper("ruby") do %>
-# Enable the official Middleman blogging extension
-activate :blog do |blog|
-  blog.paginate = true
-  blog.page_link = "p:num"
-  blog.per_page = 20
-  blog.permalink = ":title/"
-  blog.sources = "posts/:year-:month-:day-:title.html"
+# Here's an example of this script in action. This is a long line that you can scroll to read using your hands or touchpad or mouse or something, if you know what I mean.
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+# Build-specific configuration
+configure :build do
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript
+
+  # Enable cache buster
+  activate :asset_hash
+
+  # Use relative URLs
+  # activate :relative_assets
+
+  # Or use a different image path
+  # set :http_prefix, "/Content/images/"
 end
 <% end %>
 
@@ -63,7 +100,7 @@ While blogging isn&#39;t front-and-center on the Middleman site, blogging is
 
 <p>Many of the functions of a static 
 site generator are already handled by web application frameworks like Rails. 
-Why reinvent the wheel and make me learn a new way of doing the same thing? 
+<mark>Why reinvent the wheel and make me learn a new way of doing the same thing?</mark> 
 Middleman pulls in the best bits of the Rails front end. The Rails asset 
 pipeline is brought in to handle CSS and JavaScript dependencies, 
 concatination, minification, and compilation of SASS, CoffeeScript, and more. 
@@ -89,82 +126,82 @@ highlighting</a>, and
 <table class="table">
   <tbody>
     <tr class="titles">
-            <td class="symbol">Symbol</td>
-            <td class="company">Company</td>
-            <td class="amount">Amount</td>
-            <td class="yield">Yield</td>
-            <td class="exdate">Ex-Date</td>
-        </tr><!-- titles -->
-        <tr>
-            <td class="symbol">SDT</td>
-            <td class="company">SandRidge Mississippian Trust I</td>
-            <td class="amount">$0.6029</td>
-            <td class="yield">19.57%</td>
-            <td class="exdate">11/12/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">SDR</td>
-            <td class="company">Sandridge Mississippian Trust II</td>
-            <td class="amount">$0.5360</td>
-            <td class="yield">18.64%</td>
-            <td class="exdate">11/12/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">PER</td>
-            <td class="company">SandRidge Permian Trust</td>
-            <td class="amount">$0.6520</td>
-            <td class="yield">18.23%</td>
-            <td class="exdate">11/12/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">JMI</td>
-            <td class="company">JAVELIN Mortgage Investment Corp.</td>
-            <td class="amount">$0.1500</td>
-            <td class="yield">15.16%</td>
-            <td class="exdate">11/13/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">ARR</td>
-            <td class="company">ARMOUR Residential REIT, Inc.</td>
-            <td class="amount">$0.0500</td>
-            <td class="yield">14.56%</td>
-            <td class="exdate">11/13/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">OAKS</td>
-            <td class="company">Five Oaks Investment Corp.</td>
-            <td class="amount">$0.1250</td>
-            <td class="yield">12.63%</td>
-            <td class="exdate">11/13/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">FSC</td>
-            <td class="company">Fifth Street Finance Corp.</td>
-            <td class="amount">$0.0958</td>
-            <td class="yield">11.27%</td>
-            <td class="exdate">11/13/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">HRZN</td>
-            <td class="company">Horizon Technology Finance Corporation</td>
-            <td class="amount">$0.1150</td>
-            <td class="yield">10.24%</td>
-            <td class="exdate">11/15/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">GAIN</td>
-            <td class="company">Gladstone Investment Corporation</td>
-            <td class="amount">$0.0600</td>
-            <td class="yield">10.18%</td>
-            <td class="exdate">11/12/2013</td>
-        </tr>
-        <tr>
-            <td class="symbol">GLAD</td>
-            <td class="company">Gladstone Capital Corporation</td>
-            <td class="amount">$0.0700</td>
-            <td class="yield">9.52%</td>
-            <td class="exdate">11/12/2013</td>
-        </tr>
+        <th class="symbol">Symbol</td>
+        <th class="company">Company</td>
+        <th class="amount">Amount</td>
+        <th class="yield">Yield</td>
+        <th class="exdate">Ex-Date</td>
+    </tr><!-- titles -->
+    <tr>
+        <td class="symbol">SDT</td>
+        <td class="company">SandRidge Mississippian Trust I</td>
+        <td class="amount">$0.6029</td>
+        <td class="yield">19.57%</td>
+        <td class="exdate">11/12/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">SDR</td>
+        <td class="company">Sandridge Mississippian Trust II</td>
+        <td class="amount">$0.5360</td>
+        <td class="yield">18.64%</td>
+        <td class="exdate">11/12/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">PER</td>
+        <td class="company">SandRidge Permian Trust</td>
+        <td class="amount">$0.6520</td>
+        <td class="yield">18.23%</td>
+        <td class="exdate">11/12/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">JMI</td>
+        <td class="company">JAVELIN Mortgage Investment Corp.</td>
+        <td class="amount">$0.1500</td>
+        <td class="yield">15.16%</td>
+        <td class="exdate">11/13/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">ARR</td>
+        <td class="company">ARMOUR Residential REIT, Inc.</td>
+        <td class="amount">$0.0500</td>
+        <td class="yield">14.56%</td>
+        <td class="exdate">11/13/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">OAKS</td>
+        <td class="company">Five Oaks Investment Corp.</td>
+        <td class="amount">$0.1250</td>
+        <td class="yield">12.63%</td>
+        <td class="exdate">11/13/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">FSC</td>
+        <td class="company">Fifth Street Finance Corp.</td>
+        <td class="amount">$0.0958</td>
+        <td class="yield">11.27%</td>
+        <td class="exdate">11/13/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">HRZN</td>
+        <td class="company">Horizon Technology Finance Corporation</td>
+        <td class="amount">$0.1150</td>
+        <td class="yield">10.24%</td>
+        <td class="exdate">11/15/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">GAIN</td>
+        <td class="company">Gladstone Investment Corporation</td>
+        <td class="amount">$0.0600</td>
+        <td class="yield">10.18%</td>
+        <td class="exdate">11/12/2013</td>
+    </tr>
+    <tr>
+        <td class="symbol">GLAD</td>
+        <td class="company">Gladstone Capital Corporation</td>
+        <td class="amount">$0.0700</td>
+        <td class="yield">9.52%</td>
+        <td class="exdate">11/12/2013</td>
+    </tr>
   </tbody>
 </table>
 

@@ -13,38 +13,38 @@ $gray-darker:            lighten(#000, 13.5%); // #222
 $gray-dark:              lighten(#000, 20%);   // #333
 $gray:                   lighten(#000, 33.5%); // #555
 $gray-light:             lighten(#000, 60%);   // #999
-$gray-lighter:           lighten(#000, 93.5%); // #eee
+$gray-lighter:           lighten(#000, 85%);   // #d9d9d9
 
 // Brand colors
 // -------------------------
 
-$brand-primary:         #68AA53;
+$brand-primary:         #8A8473;
 $brand-success:         #CAF0C1;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
-$brand-info:            #29800D;
+$brand-info:            #d4d3c1;
 
 // Scaffolding
 // -------------------------
 
-$body-bg:               #fff;
-$text-color:            $gray-dark;
+$body-bg:               #eeedeb;
+$text-color:            $gray;
 
 // Links
 // -------------------------
 
-$link-color:            darken($brand-primary, 10%);
+$link-color:            $brand-primary;
 $link-hover-color:      darken($link-color, 15%);
 
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  "pragmatica-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, Times, serif;
-$font-family-monospace:   Courier, "Courier New", monospace;
+$font-family-monospace:   "droid-sans-mono", "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          20px;
+$font-size-base:          18px;
 $font-size-large:         ceil($font-size-base * 1.25); // ~18px
 $font-size-small:         ceil($font-size-base * 0.85); // ~12px
 
@@ -55,7 +55,7 @@ $font-size-h4:            ceil($font-size-base * 1.25); // ~18px
 $font-size-h5:            $font-size-base;
 $font-size-h6:            ceil($font-size-base * 0.85); // ~12px
 
-$line-height-base:        1.428571429; // 20/14
+$line-height-base:        1.628571429; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base); // ~20px
 
 $headings-font-family:    $font-family-sans-serif;
@@ -68,7 +68,7 @@ $headings-color:          inherit;
 // -------------------------
 
 $icon-font-path: "bootstrap/";
-$icon-font-name:          "glyphicons-halflings-regular";
+$icon-font-name: "glyphicons-halflings-regular";
 
 
 // Components
@@ -315,7 +315,7 @@ $navbar-inverse-toggle-border-color:        #333;
 // -------------------------
 
 $nav-link-padding:                          10px 15px;
-$nav-link-hover-bg:                         $gray-lighter;
+$nav-link-hover-bg:                         darken($brand-info, 10%);
 
 $nav-disabled-link-color:                   $gray-light;
 $nav-disabled-link-hover-color:             $gray-light;

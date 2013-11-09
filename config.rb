@@ -24,7 +24,8 @@
 #   page "/admin/*"
 # end
 
-page "*", :layout => :two_columns
+page "*", :layout => :post
+page "/index.html", :layout => :two_columns
 page "/feed.xml", :layout => false
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
@@ -51,7 +52,11 @@ activate :automatic_image_sizes
 activate :livereload
 
 # You can't have <code> without syntax highlighting!
-activate :syntax
+activate :syntax, :line_numbers => false
+
+# Use redcarpet for Markdown parsing and fenced code block goodness
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -59,15 +64,15 @@ helpers do
     "http://derekconjar.com/" + current_page.path.gsub("index.html", "")
   end
 
-  def highlight_helper(language=nil, container_width=nil, &block)
-    if container_width.is_a?(Numeric)
-      concat_content "<style> .highlight { width: #{container_width}px; }</style>"
-    end
-    
-    concat_content '<div class="highlight-container">'
-    concat_content '<small class="highlight-language">'+language+'</small>'
+  def highlight_helper(language=nil, &block)
+    concat_content "
+      <figure class='highlight-container'>
+        <figcaption class='highlight-language'>
+          #{language}
+        </figcaption>
+    "
     code(language, &block)
-    concat_content '</div>'
+    concat_content "</figure>"
   end
 end
 

@@ -43,8 +43,3 @@ function enableDisqusComments(){
         }
     }
 }
-
-
-$(document).ready(function(){
-    enableDisqusComments();
-});
