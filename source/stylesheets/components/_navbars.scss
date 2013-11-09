@@ -45,6 +45,7 @@
         background: #d4d3c1;
         height: 100%;
         width: 60px;
+        z-index: 9;
 
         .navbar-collapse {
             position: absolute;
@@ -65,6 +66,7 @@
                 display: block;
                 margin-bottom: 12px;
                 font-size: 1.8em;
+                width: 100%;
             }
 
             .social-icon {

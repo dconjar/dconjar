@@ -42,7 +42,7 @@ activate :blog do |blog|
   blog.paginate = true
   blog.page_link = "p:num"
   blog.per_page = 20
-  blog.permalink = ":title/"
+  blog.permalink = ":title/index.html"
   blog.sources = "posts/:year-:month-:day-:title.html"
 end
 
@@ -54,6 +54,12 @@ activate :livereload
 
 # You can't have <code> without syntax highlighting!
 activate :syntax, :line_numbers => false
+
+# Uglify the htmls with middleman-minify-html
+activate :minify_html
+
+# Automatically optimize images on build
+# activate :imageoptim
 
 # Use redcarpet for Markdown parsing and fenced code block goodness
 set :markdown_engine, :redcarpet
@@ -82,3 +88,27 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote = "custom-remote" # remote name or git url, default: origin
+  # deploy.branch = "custom-branch" # default: gh-pages
+end
+
+# activate :sync do |sync|
+#   sync.fog_provider = 'AWS'
+#   sync.fog_directory = '...'
+#   sync.fog_region = 'us-west-1'
+#   sync.aws_access_key_id = ENV['AWS_ACCESS_KEY']
+#   sync.aws_secret_access_key = ENV['AWS_SECRET']
+#   sync.existing_remote_files = 'delete'
+#   sync.gzip_compression = true
+# end
+
+# activate :cloudfront do |cf|
+#   cf.access_key_id = ENV['AWS_ACCESS_KEY']
+#   cf.secret_access_key = ENV['AWS_SECRET']
+#   cf.distribution_id = '...'
+#   cf.filter = /\.html$/i
+# end

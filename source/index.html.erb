@@ -12,11 +12,23 @@ description: Derek Conjar is a web developer and such.
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-  <h2 class="heading-primary">
-    <%= link_to article.title, article %>
-  </h2>
-  <%= article.body %>
-  <%= partial "partials/social-sharing-buttons" %>
+
+  <article class="hentry">
+      <header>
+          <h2 class="entry-title heading-primary">
+              <%= link_to article.title, article %>
+          </h2>
+      </header>
+
+      <div class="entry-content">
+        <%= article.body %>
+      </div>
+
+      <aside>
+        <%= partial "partials/social-sharing-buttons" %>
+      </aside>
+  </article>
+
 <% end %>
 
 <% if paginate %>

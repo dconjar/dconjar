@@ -5,6 +5,12 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.2.0"
 gem "middleman-blog"
 gem "middleman-syntax"
+gem "middleman-minify-html"
+gem "middleman-imageoptim", "~> 0.1.3"
+
+# gem "middleman-sync"
+# gem "middleman-cloudfront"
+gem "middleman-deploy"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

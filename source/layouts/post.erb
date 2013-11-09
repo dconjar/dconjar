@@ -1,6 +1,18 @@
 <% wrap_layout :one_column do %>
-    <h1 class="heading-primary"><%= current_page.title %></h1>
-    <%= yield %>
-    <%= partial "partials/social-sharing-buttons" %>
-    <%= partial "partials/comments" %>
+    <article class="hentry">
+        <header>
+            <h1 class="entry-title heading-primary">
+                <%= current_page.title %>
+            </h1>
+        </header>
+
+        <div class="entry-content">
+            <%= yield %>
+        </div>
+
+        <aside>
+            <%= partial "partials/social-sharing-buttons" %>
+            <%= partial "partials/comments" %>
+        </aside>
+    </article>
 <% end %>
