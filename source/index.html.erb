@@ -1,5 +1,6 @@
 ---
-title: Derek Conjar, Builder of Websites
+title: Derek Conjar, web craftsman
+description: Derek Conjar is a web developer and such.
 ---
 
 <% if paginate && num_pages > 1 %>
@@ -17,12 +18,6 @@ title: Derek Conjar, Builder of Websites
   <%= article.body %>
   <%= partial "partials/social-sharing-buttons" %>
 <% end %>
-
-<hr>
-
-<div class="comments">
-  <div id="disqus_thread"></div>
-</div>
 
 <% if paginate %>
   <% if next_page %>

@@ -1,16 +1,16 @@
-<a href="https://news.ycombinator.com/submitlink?u=<%= current_page.path %>&t={{ page.title | encode }}" class="btn btn-primary btn-social-sharing" target="_blank">
+<a href="https://news.ycombinator.com/submitlink?u=<%= permalink_helper %>&t=<%= title_helper %>" class="btn btn-info btn-social-sharing" target="_blank">
     <span class="btn-social-sharing-icon-hacker-news">Y</span>
     Submit to Hacker News
 </a>
-<a href="http://twitter.com/home/?status={{ page.title | encode }} - {{ site.url }}{{ page.url | replace:'index.html','' }} via @dconjar" class="btn btn-primary btn-social-sharing" target="_blank">
-    <img src="../images/logo-twitter.svg" class="btn-social-sharing-icon" width="23" height="19">
+<a href="http://twitter.com/home/?status=<%= title_helper %> - <%= permalink_helper %> via @dconjar" class="btn btn-info btn-social-sharing" target="_blank">
+    <span class='social-icon btn-social-sharing-icon'>twitter</span>
     Tweet
 </a>
-<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url | replace:'index.html','' }}" class="btn btn-primary btn-social-sharing" target="_blank">
-    <img src="../images/logo-gplus.svg" class="btn-social-sharing-icon" width="23" height="23">
+<a href="https://plus.google.com/share?url=<%= permalink_helper %>" class="btn btn-info btn-social-sharing" target="_blank">
+    <span class='social-icon btn-social-sharing-icon'>googleplus</span>
     Google +1
 </a>
-<a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url | replace:'index.html','' }}&t={{ page.title | encode }}" class="btn btn-primary btn-social-sharing" target="_blank">
-    <img src="../images/logo-facebook.svg" class="btn-social-sharing-icon" width="23" height="23">
+<a href="http://www.facebook.com/sharer.php?u=<%= permalink_helper %>&t=<%= title_helper %>" class="btn btn-info btn-social-sharing" target="_blank">
+    <span class='social-icon btn-social-sharing-icon'>facebook</span>
     Like
 </a>

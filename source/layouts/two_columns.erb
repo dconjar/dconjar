@@ -1,82 +1,13 @@
 <% wrap_layout :layout do %>
-
     <div class="row">
-
-        <div class="col-sm-12 col-md-9 col-content pull-right">
-            <div class="container container-narrow content">
+        <div class="col-sm-12 col-md-9 col-content">
+            <div class="container container-narrow">
+                <%= partial "partials/heading-vcard" %>
                 <%= yield %>
             </div>
         </div>
-
         <div class="col-sm-12 col-md-3 col-sidebar pull-left">
-            <div class="panel panel-default">
-                <header class="panel-heading">
-                    <h3 class="panel-title">Popular Posts</h3>
-                </header>
-
-                <div class="panel-body">
-                    <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                    <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-                </div>
-
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                        <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-                    </li>
-                    <li class="list-group-item">
-                        <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                        <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-                    </li>
-                    <li class="list-group-item">
-                        <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                        <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-                    </li>
-                    <li class="list-group-item">
-                        <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                        <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-                    </li>
-                </ul>
-            </div>
+            <%= partial "partials/sidebar" %>
         </div>
-
-
-
-
-        <% (1..2).each do %>
-        <div class="col-sm-6 col-md-4 col-lg-2 col-sidebar hide">
-            <div class="panel panel-default">
-                <header class="panel-heading">
-                    Popular Posts
-                </header>
-
-                <div class="panel-body">
-                    <h3 class="panel-subheading"><a href="#">Site Speed, Web App Complexity, and Other Quanderies</a></h3>
-                    <p>When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase.</p>
-                </div>
-
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Port of the Bootstrap and Foundation Components to Inuit.css</a></li>
-                    <li class="list-group-item"><a href="#">Use Rails Dammit</a></li>
-                    <li class="list-group-item"><a href="#">Avoid Wheel-Reinventing</a></li>
-                    <li class="list-group-item"><a href="#">Vim vs. Emacs Revisited</a></li>
-                </ul>
-
-              <!--   <h3 class="panel-subheading">Port of the Bootstrap and Foundation Components to Inuit.css</h3>
-                If all the batteries are included (but optional), there’s no reason not to use the BEM / OOCSS / SMACSS goodness of Inuit.</p>
-
-                <h3 class="panel-subheading">Use Rails Dammit</h3>
-                <p>Leaning on third party services is too rigid. If I want something as simple as password reset funtionality, I’m shit outta luck.</p>
-
-                <h3 class="panel-subheading">Avoid Wheel-Reinventing</h3>
-                <p>Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
-
-                <h3 class="panel-subheading">Vim vs. Emacs is Like Chrome vs. Firefox</h3>
-                <p>I prefer the better text editor over the more extendible one. And how about that emacs learning curve?</p> -->
-            </div>
-        </div>
-        <% end %>
-
     </div>
-
 <% end %>

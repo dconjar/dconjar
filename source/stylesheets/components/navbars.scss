@@ -12,6 +12,14 @@
     .nav a {
         text-decoration: none;
         font-size: 0.8em;
+
+        &:hover {
+            background: transparent;
+        }
+    }
+
+    .navbar-collapse {
+        max-height: none;
     }
 
     .navbar-toggle {
@@ -19,8 +27,49 @@
         margin-right: 4px;
         margin-top: 9px;
 
+        .icon-bar {
+            background: darken($brand-info, 20%);
+        }
+
         &:hover {
             background: transparent;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .navbar-primary {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: #d4d3c1;
+        height: 100%;
+        width: 60px;
+
+        .navbar-collapse {
+            position: absolute;
+        }
+
+        .nav li {
+            margin: 0.4em 0;
+        }
+
+        .nav a {
+            padding: 6px;
+            text-align: center;
+            width: 60px;
+            font-size: 0.7em;
+            line-height: 1.2em;
+
+            .glyphicon, .social-icon {
+                display: block;
+                margin-bottom: 12px;
+                font-size: 1.8em;
+            }
+
+            .social-icon {
+                font-size: 3.4em;
+            }
         }
     }
 }

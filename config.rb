@@ -27,6 +27,7 @@
 page "*", :layout => :post
 page "/index.html", :layout => :two_columns
 page "/feed.xml", :layout => false
+page "/sitemap.xml", :layout => false
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -57,24 +58,6 @@ activate :syntax, :line_numbers => false
 # Use redcarpet for Markdown parsing and fenced code block goodness
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
-
-# Methods defined in the helpers block are available in templates
-helpers do
-  def permalink_helper
-    "http://derekconjar.com/" + current_page.path.gsub("index.html", "")
-  end
-
-  def highlight_helper(language=nil, &block)
-    concat_content "
-      <figure class='highlight-container'>
-        <figcaption class='highlight-language'>
-          #{language}
-        </figcaption>
-    "
-    code(language, &block)
-    concat_content "</figure>"
-  end
-end
 
 set :css_dir, 'stylesheets'
 

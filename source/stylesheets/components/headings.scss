@@ -1,10 +1,46 @@
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
 .heading-primary {
     margin-top: 0;
+    font-size: $font-size-h1;
     font-weight: bold;
-    color: $gray-dark;
+    color: $gray;
 
     a {
-        color: $gray-dark;
+        color: $gray;
         text-decoration: none;
+
+        &:hover {
+            color: $gray-dark;
+        }
     }
+}
+
+.heading-vcard {
+    margin-bottom: 1.6em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+}
+
+.heading-vcard-head, .heading-vcard-head a {
+    text-transform: uppercase;
+    color: lighten($brand-primary, 20%);
+    margin-bottom: 0;
+    text-decoration: none;
+
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.heading-vcard-subhead {
+    text-transform: lowercase;
+    margin-top: 0.2em;
+    color: $gray-light;
 }

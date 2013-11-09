@@ -13,8 +13,12 @@
 
 //= require_tree .
 
-
 $(document).ready(function(){
-    addScrollingCodeBlocks();
-    enableDisqusComments();
-});
+    fixSidebarHeight()
+    addScrollingCodeBlocks()
+    enableDisqusComments()
+})
+
+$(window).scroll(function(){
+    fixSidebarHeight()
+})

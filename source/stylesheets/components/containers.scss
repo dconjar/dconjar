@@ -3,5 +3,12 @@
 }
 
 .container-narrow {
-    max-width: 600px;
+    max-width: 660px;
+    padding-right: 60px;
+}
+
+@media (max-width: $screen-md-min) {
+    .container-narrow {
+        padding-right: 0;
+    }
 }

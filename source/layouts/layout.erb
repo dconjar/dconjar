@@ -1,10 +1,32 @@
 <!doctype html>
 <html>
+
   <head>
+
+    <title><%= title_helper %></title>
+
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    <title><%= current_page.data.title || "Derek Conjar builds websites" %></title>
+    <meta name="description" content="<%= description_helper %>">
+
+    <link rel="canonical" href="<%= permalink_helper %>">
+    <link rel="author" href="<%= data.site.gplus %>">
+    <link rel="alternate" type="application/rss+xml" title="http://derekconjar.com/feed.xml">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="<%= title_helper %>">
+    <meta property="og:description" content="<%= description_helper %>">
+    <meta property="og:url" content="<%= permalink_helper %>">
+    <meta property="og:site_name" content="<%= site_name_helper %>">
+    <meta property="og:image" content="<%= image_helper %>">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@dconjar">
+    <meta name="twitter:creator" content="@dconjar">
+    <meta name="twitter:title" content="<%= title_helper %>">
+    <meta name="twitter:description" content="<%= description_helper %>">
+    <meta name="twitter:image" content="<%= image_helper %>">
     
     <%= stylesheet_link_tag "all" %>
 
@@ -16,53 +38,12 @@
   
   <body class="<%= page_classes %>">
 
-    <nav class="navbar navbar-primary hide">
-      <a class="navbar-brand navbar-logo" href="/">
-        Derek Conjar
-      </a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary .collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav hide">
-          <li class="active">
-            <a href="#">
-              <span class="glyphicon glyphicon-calendar"></span>
-              Blog Archives
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-envelope"></span>
-              Subscribe to Updates
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-user"></span>
-              About Me
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="glyphicon glyphicon-earphone"></span>
-              Contact Me
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    <%= partial "partials/navbar-primary" %>
     <%= yield %>
-
-    <footer>
-      
-    </footer>
+    <%= partial "partials/modals" %>
 
     <script src="//code.jquery.com/jquery.js"></script>
     <%= javascript_include_tag  "all" %>
+
   </body>
 </html>

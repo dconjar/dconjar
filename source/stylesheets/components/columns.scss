@@ -1,4 +1,11 @@
 .col-content {
     padding: 1em;
     border-left: 1px solid $gray-lighter;
+    float: right;
+}
+
+@media (max-width: $screen-sm-min) {
+    .col-content {
+        float: none;
+    }
 }

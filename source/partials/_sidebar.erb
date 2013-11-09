@@ -1,0 +1,15 @@
+<% (1..4).each do %>
+    <div class="panel panel-default panel-minimal">
+        <header class="panel-heading">
+            <h3 class="panel-title">Popular Posts</h3>
+        </header>
+        <ul class="list-group">
+            <% (1..10).each do %>
+            <a href="#" class="list-group-item panel-item">
+                <h3 class="panel-subheading">The Problem with WordPress</h3>
+                <p class="panel-paragraph">When an actual backend is required, I accompany Middleman with a BaaS solution like Firebase. Rails gives me a nice DSL for building web apps, and does lots of heavy lifting without being pushy.</p>
+            </a>
+            <% end %>
+        </ul>
+    </div>
+<% end %>

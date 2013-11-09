@@ -5,21 +5,30 @@
 .btn-social-sharing {
     font-size: 0.7em;
     font-family: $font-family-sans-serif;
-    padding: 7px 6px;
+    padding: 7px 16px;
     margin-right: 10px;
     height: 36px;
     text-decoration: none;
+    color: $brand-primary;
+
+    &:hover {
+        color: $gray;
+    }
 }
 
 .btn-social-sharing-icon {
-    margin-bottom: 3px;
+    font-size: 2.6em;
+    float: left;
+    line-height: 1em;
+    margin: -6px 4px 0px -10px;
 }
 
 /* Use by placing a "Y" in a container with the class */
 .btn-social-sharing-icon-hacker-news {
-    background: #fff;
-    color: #68AA53;
-    padding: 2px 6px;
-    border: 1px solid #fff;
+    background: $brand-primary;
     font-family: Verdana, sans-serif;
+    color: $brand-info;
+    padding: 0 4px;
+    margin-left: -2px;
+    margin-right: 10px;
 }

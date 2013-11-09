@@ -1,6 +1,18 @@
-.panel {
+.panel-minimal {
+    border-radius: 0;
+    border: 0;
     color: $gray-light;
     font-size: 0.8em;
+    background: transparent;
+
+    .panel-heading {
+        background-color: $brand-info;
+        border-radius: 0;
+    }
+
+    .panel-title {
+        color: lighten($brand-primary, 10%);
+    }
 }
 
 .panel-subheading {
@@ -8,4 +20,15 @@
     line-height: 1.4em;
     margin-top: 0;
     margin-bottom: 0.4em;
+    font-weight: bold;
+    color: $gray-light;
+}
+
+.panel-paragraph {
+    color: $gray-light;
+}
+
+.panel-item {
+    background: transparent;
+    text-decoration: none;
 }

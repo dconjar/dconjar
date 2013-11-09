@@ -1,13 +1,6 @@
-<% wrap_layout :two_columns do %>
-    <h1 class="heading-primary">
-    <%= current_page.title %>
-    </h1>
+<% wrap_layout :one_column do %>
+    <h1 class="heading-primary"><%= current_page.title %></h1>
     <%= yield %>
     <%= partial "partials/social-sharing-buttons" %>
-
-    <hr>
-
-    <div class="comments">
-      <div id="disqus_thread"></div>
-    </div>
+    <%= partial "partials/comments" %>
 <% end %>
