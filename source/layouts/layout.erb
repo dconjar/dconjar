@@ -29,17 +29,6 @@
     <meta name="twitter:description" content="<%= description_helper %>">
     <meta name="twitter:image" content="<%= image_helper %>">
 
-    <!-- Load Typekit fonts -->
-    <script>
-        (function() {
-            var config = {
-                kitId: 'xts5piy',
-                scriptTimeout: 1000
-            };
-            var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-        })();
-    </script>
-    
     <%= stylesheet_link_tag "all" %>
 
     <!--[if lt IE 9]>
@@ -55,7 +44,7 @@
     <%= yield %>
     <%= partial "partials/modals" %>
 
-    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <%= javascript_include_tag  "all" %>
 
   </body>
