@@ -82,21 +82,28 @@
             width: 100%;
         }
 
+        .navbar-nav {
+            margin: 0;
+        }
+
         li {
-            border-top: 1px solid darken($brand-info, 5%);
+            border-top: 1px solid darken($brand-info, 10%);
+            background-color: darken($brand-info, 5%);
+            font-size: 1.3em;
 
             &:hover {
-                background-color: darken($brand-info, 5%);
+                background-color: darken($brand-info, 10%);
             }
         }
 
         .social-icon {
             font-size: 1.8em;
             margin-left: -3px;
+            margin-right: 6px;
         }
 
         .glyphicon {
-            margin-right: 4px;
+            margin-right: 10px;
         }
     }
 }

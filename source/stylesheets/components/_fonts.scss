@@ -1,0 +1,11 @@
+/* Hide text before Typekit has loaded */
+.wf-loading {
+    visibility: hidden;
+}
+
+// Scale down fonts on mobile
+@media (max-width: $screen-sm-min) {
+    body {
+        font-size: 14px;
+    }
+}
