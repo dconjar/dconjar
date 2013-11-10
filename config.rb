@@ -25,7 +25,7 @@
 # end
 
 page "*", :layout => :post
-page "/index.html", :layout => :two_columns
+page "/index.html", :layout => :one_column
 page "/feed.xml", :layout => false
 page "/sitemap.xml", :layout => false
 
