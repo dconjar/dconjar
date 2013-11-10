@@ -55,9 +55,6 @@ activate :livereload
 # You can't have <code> without syntax highlighting!
 activate :syntax, :line_numbers => false
 
-# Uglify the htmls with middleman-minify-html
-activate :minify_html
-
 # Automatically optimize images on build
 # activate :imageoptim
 
@@ -78,6 +75,9 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  # Uglify the htmls with middleman-minify-html
+  activate :minify_html
 
   # Enable cache buster
   activate :asset_hash

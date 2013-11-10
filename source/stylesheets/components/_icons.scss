@@ -1,17 +1,21 @@
+$social-icon-font-path: '../../fonts/';
+$social-icon-font-name: 'MonoSocialIconsFont-1.10';
+
 @font-face {
-    font-family: 'Mono Social Icons Font';
-    src: url('../../fonts/MonoSocialIconsFont-1.10.eot');
-    src: url('../../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
-         url('../../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-         url('../../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('../../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Mono Social Icons Font';
+  src: url("#{$social-icon-font-path}#{$social-icon-font-name}.eot");
+  src: url("#{$social-icon-font-path}#{$social-icon-font-name}.eot?#iefix") format('embedded-opentype'),
+       url("#{$social-icon-font-path}#{$social-icon-font-name}.woff") format('woff'),
+       url("#{$social-icon-font-path}#{$social-icon-font-name}.ttf") format('truetype'),
+       url("#{$social-icon-font-path}#{$social-icon-font-name}.svg") format('svg');
 }
 
 .social-icon, a.social-icon:before {
     font-family: 'Mono Social Icons Font';
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
     -webkit-text-rendering: optimizeLegibility;
     -moz-text-rendering: optimizeLegibility;
     -ms-text-rendering: optimizeLegibility;
@@ -22,6 +26,7 @@
     -ms-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a.social-icon:before {
