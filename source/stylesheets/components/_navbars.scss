@@ -4,11 +4,6 @@
     border: 0;
     margin-bottom: 0;
 
-    .navbar-logo {
-        text-decoration: none;
-        margin-left: 15px;
-    }
-
     .nav a {
         text-decoration: none;
         font-size: 0.8em;
@@ -36,6 +31,8 @@
         }
     }
 }
+
+// Display navbar across right on larger resolutions
 
 @media (min-width: $screen-md-min) {
     .navbar-primary {
@@ -72,6 +69,34 @@
             .social-icon {
                 font-size: 3.4em;
             }
+        }
+    }
+}
+
+// Display Bootstrap-style navbar links in grid
+// on smaller resolutions
+
+@media (max-width: $screen-md-min) {
+    .navbar-primary {
+        .navbar-collapse {
+            width: 100%;
+        }
+
+        li {
+            border-top: 1px solid darken($brand-info, 5%);
+
+            &:hover {
+                background-color: darken($brand-info, 5%);
+            }
+        }
+
+        .social-icon {
+            font-size: 1.8em;
+            margin-left: -3px;
+        }
+
+        .glyphicon {
+            margin-right: 4px;
         }
     }
 }

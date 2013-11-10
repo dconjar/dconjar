@@ -89,26 +89,10 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+# Push to GitHub Pages with "middleman deploy" (but build first)
 activate :deploy do |deploy|
   deploy.method = :git
   # Optional Settings
   # deploy.remote = "custom-remote" # remote name or git url, default: origin
   # deploy.branch = "custom-branch" # default: gh-pages
 end
-
-# activate :sync do |sync|
-#   sync.fog_provider = 'AWS'
-#   sync.fog_directory = '...'
-#   sync.fog_region = 'us-west-1'
-#   sync.aws_access_key_id = ENV['AWS_ACCESS_KEY']
-#   sync.aws_secret_access_key = ENV['AWS_SECRET']
-#   sync.existing_remote_files = 'delete'
-#   sync.gzip_compression = true
-# end
-
-# activate :cloudfront do |cf|
-#   cf.access_key_id = ENV['AWS_ACCESS_KEY']
-#   cf.secret_access_key = ENV['AWS_SECRET']
-#   cf.distribution_id = '...'
-#   cf.filter = /\.html$/i
-# end
