@@ -14,17 +14,19 @@ description: Derek Conjar is a web developer and such.
 <% page_articles.each_with_index do |article, i| %>
 
   <article class="hentry">
-      <header>
-          <h2 class="entry-title heading-primary">
-              <%= link_to article.title, article %>
-          </h2>
-      </header>
+    <header>
+        <h2 class="entry-title heading-primary">
+            <%= link_to article.title, article %>
+        </h2>
+    </header>
 
-      <div class="entry-content">
-        <%= article.body %>
-      </div>
+    <div class="entry-content">
+      <%= article.body %>
+    </div>
 
-      <%= partial "partials/social-sharing-buttons", :locals => { :article => article } %>
+    <%= partial "partials/subscribe-form" %>
+
+    <%= partial "partials/social-sharing-buttons", :locals => { :article => article } %>
   </article>
 
 <% end %>
