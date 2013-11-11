@@ -1,0 +1,24 @@
+.masthead {
+    margin-bottom: 1.6em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $brand-info;
+    position: relative;
+}
+
+.masthead-heading, .masthead-heading a {
+    text-transform: uppercase;
+    color: lighten($brand-primary, 20%);
+    margin-bottom: 0;
+    text-decoration: none;
+    font-weight: normal;
+
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.masthead-subheading {
+    text-transform: lowercase;
+    margin-top: 0.2em;
+    color: $gray-light;
+}

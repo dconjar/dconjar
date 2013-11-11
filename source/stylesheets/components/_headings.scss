@@ -20,27 +20,3 @@ h6 { font-size: $font-size-h6; }
         }
     }
 }
-
-.heading-vcard {
-    margin-bottom: 1.6em;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
-    text-align: right;
-}
-
-.heading-vcard-head, .heading-vcard-head a {
-    text-transform: uppercase;
-    color: lighten($brand-primary, 20%);
-    margin-bottom: 0;
-    text-decoration: none;
-
-    &:hover {
-        color: $brand-primary;
-    }
-}
-
-.heading-vcard-subhead {
-    text-transform: lowercase;
-    margin-top: 0.2em;
-    color: $gray-light;
-}

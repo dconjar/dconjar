@@ -1,0 +1,15 @@
+.search-button {
+    position: absolute;
+    right: 0;
+    color: darken($brand-info, 10%);
+
+    &:hover {
+        cursor: pointer;
+        color: darken($brand-info, 20%);
+    }
+}
+
+.search-box {
+    margin: 2em 0 1.6em;
+    display: none;
+}
