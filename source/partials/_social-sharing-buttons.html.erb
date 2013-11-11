@@ -6,12 +6,16 @@
 
 	<div class="social-sharing-buttons">
 
-		<a href="https://news.ycombinator.com/submitlink?u=<%= permalink_helper %>&t=<%= title_helper %>" class="social-sharing-button" target="_blank">
-		    <span class="icon icon-social-hacker-news"></span>
-		</a>
-
 		<a href="http://twitter.com/home/?status=<%= title_helper %> - <%= permalink_helper %> via @dconjar" class="social-sharing-button" target="_blank">
 		    <span class="icon icon-social-twitter"></span>
+		</a>
+
+		<a href="#" class="social-sharing-button" target="_blank">
+		    <span class="icon icon-social-linkedin"></span>
+		</a>
+
+		<a href="https://news.ycombinator.com/submitlink?u=<%= permalink_helper %>&t=<%= title_helper %>" class="social-sharing-button" target="_blank">
+		    <span class="icon icon-social-hacker-news"></span>
 		</a>
 
 		<a href="https://plus.google.com/share?url=<%= permalink_helper %>" class="social-sharing-button" target="_blank">
@@ -20,6 +24,10 @@
 
 		<a href="http://www.facebook.com/sharer.php?u=<%= permalink_helper %>&t=<%= title_helper %>" class="social-sharing-button" target="_blank">
 		    <span class="icon icon-social-facebook"></span>
+		</a>
+
+		<a href="mailto: ?subject=<%= title_helper %>&body=<%= permalink_helper %>" class="social-sharing-button" target="_blank">
+		    <span class="icon icon-mail"></span>
 		</a>
 
 	</div>
