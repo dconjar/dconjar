@@ -13,14 +13,19 @@
 
 //= require_tree .
 
-$(document).ready(function(){
+$(document).ready(function () {
     fixSidebarHeight()
     addScrollingCodeBlocks()
     loadSearchBox()
     enableDisqusComments()
 })
 
-$(window).resize(function(){
+$(window).resize(function () {
+    fixSidebarHeight()
+    addScrollingCodeBlocks()
+})
+
+$(window).on('orientationchange', function () {
     fixSidebarHeight()
     addScrollingCodeBlocks()
 })
