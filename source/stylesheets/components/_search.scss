@@ -1,10 +1,13 @@
 .search-button {
+    cursor: pointer;
+}
+
+.search-button-masthead {
     position: absolute;
     right: 0;
     color: darken($brand-info, 10%);
 
     &:hover {
-        cursor: pointer;
         color: darken($brand-info, 20%);
     }
 }
