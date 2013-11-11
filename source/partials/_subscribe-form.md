@@ -10,7 +10,7 @@
         <input type="text" name="email" class="form-control" placeholder="Your email address">
     </div>
 
-    <button type="submit" class="btn btn-primary" name="submit">
+    <button type="submit" class="btn btn-danger" name="submit">
         Subscribe by Email
     </button>
 </form>
