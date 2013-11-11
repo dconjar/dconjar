@@ -37,18 +37,20 @@ function addScrollingCodeBlocks() {
             $(highlights[i]).width(idealWidth)
         }
 
-        // Add a <figure> around the code block
-        // to control the overflow-x
+        if ($('.highlight-container').length < highlights.length) {
 
-        var figure = "<figure class='highlight-container'></figure>"
-        $(highlights[i]).wrap(figure)
+            // Add a <figure> around the code block
+            // to control the overflow-x
 
-        // And add a "figcaption" of the language
+            var figure = "<figure class='highlight-container'></figure>"
+            $(highlights[i]).wrap(figure)
 
-        var language = $(highlights[i]).attr('class').split(' ')[1]
-        var figcaption = "<figcaption class='highlight-language'>"+language+"</figcaption>"
-        $($(highlights[i]).parent()).prepend(figcaption)
+            // And add a "figcaption" of the language
 
+            var language = $(highlights[i]).attr('class').split(' ')[1]
+            var figcaption = "<figcaption class='highlight-language'>"+language+"</figcaption>"
+            $($(highlights[i]).parent()).prepend(figcaption)
+
+        }
     }
-
 }

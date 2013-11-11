@@ -20,6 +20,7 @@ $(document).ready(function(){
     enableDisqusComments()
 })
 
-$(window).scroll(function(){
+$(window).resize(function(){
     fixSidebarHeight()
+    addScrollingCodeBlocks()
 })
