@@ -22,3 +22,9 @@
     margin-top: 0.2em;
     color: $gray-light;
 }
+
+@media (max-width: $screen-md-min) {
+    .masthead-heading {
+        margin-top: 0;
+    }
+}
