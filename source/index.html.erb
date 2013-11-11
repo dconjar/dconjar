@@ -24,7 +24,7 @@ description: Derek Conjar is a web developer and such.
         <%= article.body %>
       </div>
 
-      <%= partial "partials/social-sharing-buttons" %>
+      <%= partial "partials/social-sharing-buttons", :locals => { :article => article } %>
   </article>
 
 <% end %>
