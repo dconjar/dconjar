@@ -22,10 +22,4 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     fixSidebarHeight()
-    addScrollingCodeBlocks()
-})
-
-$(window).on('orientationchange', function () {
-    fixSidebarHeight()
-    addScrollingCodeBlocks()
 })
