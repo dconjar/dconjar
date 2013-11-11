@@ -3,8 +3,8 @@ title: "Behind the scenes of my new site launch"
 description: "Oh man, this is a middleman"
 ---
 
-> This is part three of a five-part series on **rapidly building 
-> websites with Middleman and Boostrap**. To begin with part one, 
+> This is part three of a five-part series on **getting your 
+> boogie on like a pro**. To begin with part one, 
 > which explores *why* this is a good idea, click [here](#). 
 > Or skip ahead to part [2](#), [3](#), [4](#), or [5](#).
 

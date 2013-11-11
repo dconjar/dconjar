@@ -1,0 +1,14 @@
+.social-sharing-button {
+    font-size: 3em;
+    font-family: $font-family-sans-serif;
+    padding: 7px 16px;
+    margin-right: 10px;
+    margin-bottom: 14px;
+    height: 36px;
+    text-decoration: none;
+    color: darken($brand-info, 10%);
+
+    &:hover {
+        color: darken($brand-info, 20%);
+    }
+}
