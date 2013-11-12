@@ -18,8 +18,9 @@ gem "builder"
 gem "middleman-minify-html"
 gem "middleman-imageoptim"
 
-# Deploy to GH Pages with "middleman deploy"
-gem "middleman-deploy"
+# Deploy to Amazon Cloudfront on "middleman build"
+gem "middleman-s3_sync"
+gem "middleman-cloudfront"
 
 # Use the Sassy version of Twitter Bootstrap
 gem "bootstrap-sass"

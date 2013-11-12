@@ -79,6 +79,9 @@ configure :build do
   # Uglify the htmls with middleman-minify-html
   activate :minify_html
 
+  # Serve compressed files
+  activate :gzip
+
   # Enable cache buster
   activate :asset_hash
 
@@ -89,10 +92,28 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-# Push to GitHub Pages with "middleman deploy" (but build first)
-activate :deploy do |deploy|
-  deploy.method = :git
-  # Optional Settings
-  # deploy.remote = "custom-remote" # remote name or git url, default: origin
-  # deploy.branch = "custom-branch" # default: gh-pages
+require 'deploy'
+
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = 'www.derekconjar.com'
+  s3_sync.region                     = 'us-east-1'
+  s3_sync.aws_access_key_id          = AWS_KEY_ID
+  s3_sync.aws_secret_access_key      = AWS_SECRET
+  s3_sync.delete                     = true
+  s3_sync.after_build                = true
+  s3_sync.prefer_gzip                = true
+  s3_sync.path_style                 = true
+  s3_sync.reduced_redundancy_storage = false
+  s3_sync.acl                        = 'public-read'
+  s3_sync.encryption                 = false
+end
+
+default_caching_policy max_age:(60 * 60 * 24 * 365)
+
+activate :cloudfront do |cf|
+  cf.access_key_id      = AWS_KEY_ID
+  cf.secret_access_key  = AWS_SECRET
+  cf.distribution_id    = CF_DISTRIB
+  # cf.filter = /\.html$/i  # default is /.*/
+  # cf.after_build = false  # default is false
 end
