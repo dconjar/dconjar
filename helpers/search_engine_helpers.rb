@@ -15,7 +15,7 @@ module SearchEngineHelpers
         if article.nil?
             escape_html(data.site.url + current_page.url.gsub("index.html", ""))
         else
-            escape_html("#{data.site.url}/#{article.slug}/")
+            escape_html("#{data.site.url}#{article.url}")
         end
     end
 
@@ -33,5 +33,17 @@ module SearchEngineHelpers
 
     def sitemap_entry_helper(page)
         data.site.url + '/' + page.destination_path.gsub('index.html', '')
+    end
+
+    def read_next_helper
+        random_num          = Random.new
+        random_post_index   = random_num.rand(0...page_articles.length)
+        random_post         = page_articles[random_post_index]
+
+        { 
+            url: random_post.url,
+            title: random_post.title,
+            description: random_post.data.description
+        }
     end
 end
