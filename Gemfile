@@ -22,7 +22,7 @@ gem "middleman-imageoptim"
 gem "middleman-deploy"
 
 # Use the Sassy version of Twitter Bootstrap
-gem 'bootstrap-sass'
+gem "bootstrap-sass"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
