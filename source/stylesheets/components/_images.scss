@@ -1,0 +1,5 @@
+// Make all images responsive by default
+
+img {
+	@include img-responsive();
+}
