@@ -11,6 +11,7 @@
 
 .social-sharing-buttons {
     padding: 0.6em 0 0;
+    line-height: 0.5em;
 }
 
 .social-sharing-button {
@@ -22,9 +23,16 @@
     text-decoration: none;
     color: darken($brand-info, 10%);
     line-height: 1;
+    display: inline-block;
+    height: 32px;
 
     &:hover {
         color: darken($brand-info, 20%);
         text-decoration: none;
+    }
+
+    .icon {
+        height: 46px;
+        display: inline-block;
     }
 }
