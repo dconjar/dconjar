@@ -1,0 +1,17 @@
+<div class="panel panel-default panel-minimal">
+    <header class="panel-heading">
+        <h3 class="panel-title">Latest Posts</h3>
+    </header>
+    <div class="list-group">
+        <% page_articles.each do |article| %>
+        <a href="#" class="list-group-item panel-item">
+            <h3 class="panel-subheading">
+                <%= article.title %>
+            </h3>
+            <p class="panel-paragraph">
+                <%= article.data.description %>
+            </p>
+        </a>
+        <% end %>
+    </div>
+</div>
