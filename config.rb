@@ -109,6 +109,7 @@ activate :s3_sync do |s3_sync|
 end
 
 default_caching_policy max_age:(60 * 60 * 24 * 365)
+caching_policy 'text/html', max_age: 0, must_revalidate: true
 
 activate :cloudfront do |cf|
   cf.access_key_id      = AWS_KEY_ID

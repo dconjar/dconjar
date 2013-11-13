@@ -7,7 +7,7 @@
 $icon-file-path: '../../fonts/foundation-icons';
 
 @font-face {
-  font-family: "#{$icon-file-path}";
+  font-family: "foundation-icons";
   src: url("#{$icon-file-path}.eot");
   src: url("#{$icon-file-path}.eot?#iefix") format("embedded-opentype"),
        url("#{$icon-file-path}.woff") format("woff"),
@@ -300,7 +300,7 @@ $icon-file-path: '../../fonts/foundation-icons';
 .icon-yen:before,
 .icon-zoom-in:before,
 .icon-zoom-out:before {
-  font-family: "#{$icon-file-path}";
+  font-family: "foundation-icons";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
