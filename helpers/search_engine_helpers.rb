@@ -36,9 +36,19 @@ module SearchEngineHelpers
     end
 
     def read_next_helper
-        random_num          = Random.new
-        random_post_index   = random_num.rand(0...page_articles.length)
-        random_post         = page_articles[random_post_index]
+        def get_random_post
+            random_num          = Random.new
+            random_post_index   = random_num.rand(0...page_articles.length)
+            random_post = page_articles[random_post_index]
+
+            if random_post.url == current_page.url
+                get_random_post
+            else
+                random_post
+            end
+        end
+
+        random_post = get_random_post
 
         { 
             url: random_post.url,
