@@ -4,7 +4,7 @@
     </header>
     <div class="list-group">
         <% page_articles.each do |article| %>
-        <a href="#" class="list-group-item panel-item">
+        <a href="<%= article.url %>" class="list-group-item panel-item">
             <h3 class="panel-subheading">
                 <%= article.title %>
             </h3>
