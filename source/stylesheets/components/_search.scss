@@ -11,6 +11,10 @@
     &:hover {
         color: darken($brand-info, 20%);
     }
+
+    .icon-magnifying-glass {
+        font-size: 1.3em;
+    }
 }
 
 .search-box {
