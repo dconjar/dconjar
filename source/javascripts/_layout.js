@@ -1,7 +1,29 @@
-// To ensure that the sidebar border stretches
-// to the bottom of the page, set the min-height
-// of the sidebar to the height of the window
+// Remove sidebar panels that extend below the content
 
-if ($(window).height() > $('.col-content').height()) {
-    $('.col-content').height($(window).height())
+var fixSidebarHeight = function () {
+
+    var sidebar = '.col-sidebar'
+      , content = '.col-content'
+      , panels  = sidebar + ' .panel'
+      , sidebarLongerThanContent = ($(sidebar).height() > $(content).height())
+
+    if (sidebarLongerThanContent){
+        while (sidebarLongerThanContent){
+            var i = $(panels).length - 1
+            $($(panels)[i]).remove()
+
+            sidebarLongerThanContent = ($(sidebar).height() > $(content).height())
+        }
+    }
+
+}
+
+// Make sure content column fills window height
+
+var fillWindowHeight = function () {
+
+    if ($(window).height() > $('.col-content').height()) {
+        $('.col-content').height($(window).height())
+    }
+
 }
