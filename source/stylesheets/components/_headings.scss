@@ -9,6 +9,7 @@ h6 { font-size: $font-size-h6; }
     margin-top: 0;
     font-size: $font-size-h1;
     font-weight: bold;
+    line-height: 1.3em;
     color: $gray;
 
     a {
@@ -18,5 +19,11 @@ h6 { font-size: $font-size-h6; }
         &:hover {
             color: $gray-dark;
         }
+    }
+}
+
+@media (max-width: $screen-sm-min) {
+    .heading-primary {
+        font-size: $font-size-h1 * 0.8;
     }
 }
