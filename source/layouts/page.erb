@@ -1,0 +1,13 @@
+<% wrap_layout :two_columns do %>
+    <article class="hentry">
+        <header>
+            <h1 class="entry-title heading-primary">
+                <%= current_page.data.title %>
+            </h1>
+        </header>
+
+        <div class="entry-content">
+            <%= yield %>
+        </div>
+    </article>
+<% end %>
