@@ -12,7 +12,11 @@ module SearchEngineHelpers
     end
 
     def description_helper
-        escape_html(current_page.data.description.to_s) || escape_html(data.site.description)
+        if current_page.data.description.nil?
+            escape_html(data.site.description)
+        else
+            escape_html(current_page.data.description)
+        end
     end
 
     def permalink_helper(article = nil)
