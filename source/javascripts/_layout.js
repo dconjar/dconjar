@@ -9,6 +9,10 @@ var fixSidebarHeight = function () {
 
     if (sidebarLongerThanContent){
         while (sidebarLongerThanContent){
+            if ($(window).height() > $(sidebar).height()) {
+                return;
+            }
+
             var i = $(panels).length - 1
             $($(panels)[i]).remove()
 
