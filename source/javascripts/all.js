@@ -17,7 +17,6 @@ $(document).ready(function () {
     fixSidebarHeight()
     fillWindowHeight()
     addScrollingCodeBlocks()
-    loadSearchBox()
     enableDisqusComments()
 })
 
