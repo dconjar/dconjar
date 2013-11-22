@@ -41,3 +41,9 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: $screen-md-min) {
+    .col-sidebar {
+        display: none;
+    }
+}
