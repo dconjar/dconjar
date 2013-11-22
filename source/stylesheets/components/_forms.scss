@@ -4,3 +4,13 @@
     border: 3px solid $brand-info;
 	text-align: center;
 }
+
+.col-sidebar .form-subscribe {
+    margin: 0;
+    border: 0;
+    padding: 2em 1em 2em;
+
+    .btn {
+        margin-top: 0.6em;
+    }
+}

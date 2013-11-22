@@ -1,5 +1,4 @@
 .social-sharing {
-    margin: 2em 0;
     text-align: center;
 }
 
@@ -35,4 +34,8 @@
         height: 46px;
         display: inline-block;
     }
+}
+
+.col-sidebar .social-sharing {
+    padding: 1em 0 1.4em;
 }
