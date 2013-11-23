@@ -1,79 +1,58 @@
 ---
-title: "How a Little-Known Piece of Software Increased My Site Speed by 640%"
+title: "Site Speed Secrets: How I Made My Blog Faster Than 99% of Websites"
 description: "On average, this site now loads in under half a second from most places in the world. Your site can be just as fast. Here are the steps I took to achieve this massive speed boost."
 ---
 
-> On average, this site now loads in under half a second from most places in the world. **Your site can be just as fast**. Here are the steps I took to achieve this massive speed boost.
+> On average, this site now loads in under half a second from most places in the world. Your site can be just as fast, but it requires some out-of-the-box thinking.
 
-I'm a big fan of [The Setup][0], the popular blog where well-known nerds get interviewed about the hardware and software they use to get stuff done.
+Site speed matters. A lot. If you increase your website's page load speed by **50%**, **100%**, or (in my case) **600%**, good things will happen:
 
-I'm not famous enough yet to be considered for inclusion, so I interviewed myself. However, the interview with myself did not go well, so I wrote this fake interview instead.
+* **Your bounce rate will drop**. [A study by Akamai][0] found that 40% of shoppers bounce by the third second of loading. People are far less likely to hit the back button when the site loads instantly.
+* **Your engagement metrics will improve**. People will spend more time on your site and load more pages per visit.
+* **Your conversion rate will increase**. When Walmart overhauled their site speed in 2012, they found that every one second improvement
 
-Who are you, and what do you do?
---------------------------------
 
-I'm Derek Conjar. I've been building websites since I was 11 years old. Or 12. Either way, I was a lesser human being.
 
-I spend lots of time coding HTML, CSS, JavaScipt and Ruby. This website was built with a Ruby-based static site generator called Middleman. You can [insult my code on GitHub][1]. I've also worked with PHP and WordPress extensively, but I'm trying to move past that. Those were dark days.
 
-What hardware do you use?
--------------------------
 
-I own two MacBooks. One is a six-year-old white MacBook. I haven't used it in years and am too lazy to list it on eBay.
 
-The other one is an early-2011 **15" MacBook Pro with a 1680x1050 resolution, 16 GB of RAM and a Crucial m4 SSD**. That thing *flies*. I can run several VMs at once with no lag. I love it more than my children.
 
-I don't actually have children.
 
-I own two dual monitors. I don't use them. **I prefer to work without them because I can freely switch between sitting, standing and walking**.
 
-Yes, I said walking. This is my battlestation:
 
-![My battlestation](battlestation.jpg)
-<p class="caption">My LifeSpan TR800-DT3 Standing Desk Treadmill</p>
 
-I don't own much physical stuff, and that includes hardware. I do own an iPad but never charge it. I sold my Kindle a couple months after I bought it, having remembered that my iPhone can also function as a Kindle.
 
-Oh, and I love my iPhone 4s! Almost forgot about that. People keep nagging me to give Android a whirl, but I'm happy with my iPhone. Although I will confess that the iOS 7 update was pretty bad.
 
-And what software?
-------------------
 
-**[Sublime Text][7] is my text editor of choice**. I like [vim][6] in theory and use it a bit via ssh, but who has the patience to learn the hundreds of keybindings necessary to actually be productive with it? Maybe I'm not mature enough. Maybe I'll be a world-changing emacs user someday. We'll see.
+***
 
-**[Chrome][8] is my go-to web browser**. The developer tools have saved my life more than a few times. And Chrome's vim emulator extension, **[Vimium][9]**, empowers you to surf the web without touching the mouse. No hands! Maybe I should learn more vim...
+This will be an advertorial promoting an infoproduct on site speed. Get people to opt-in to updates about the product launch in exchange for a discount.
 
-In speaking of keyboard shortcuts... **If you have a Mac, you need [Alfred PowerPack][2]**. Seriously. I use it to quickly retrieve files, launch applications, execute terminal commands, flush my DNS cache, view my clipboard history, and go to the bathroom. It does *everything* with just a few keystrokes. Well, except the bathroom part.
+Here's some stuff to talk about, either in this article, the product, or both:
 
-If you have as many hundreds of online accounts as I, you need a password manager. **[1Password][3] has never let me down**. It's got extensions for every browser and makes managing hundreds of long pseudo-random passwords effortless. It's awesome, but not quite as badass as [generating passwords with dice][4].
+* Why site speed matters
+* First principles - rethinking the CMS
+* Benefits of static site generation
+* Going all-in on CDNs (instead of just serving a few assets)
+* Replacing social sharing buttons with icon fonts
+* Minification and compression with Middleman
+* Deploying to s3 and Cloudfront
+* Image optimization with imageoptim
+* Working with Sass and Sprockets
+* Testing site speed with Pingdom
+* Hosting options and how they compare
 
-Here are some other softwares that help me get things done:
+This post should give a high-level view of my site speed strategy and get readers interested in the guide I'm working on.
 
-* **iTerm** for unix command line h4xing
-* **iTunes and Spotify** for getting in the zone
-* **Photoshop** for manipulating graphics
-* **Middleman** for compiling static websites
-* **Ruby on Rails** for building backend-heavy web apps
-* **jQuery** for making the DOM less painful
-* **Evernote** for clipping webpages for future reference
-* **GitHub** for being extremely useful in general
 
-What would be your dream setup?
--------------------------------
 
-I think we should bring mainframes back. Force me to learn some actual computer science.
 
-I've been trying to figure out what to do with my living room. I was considering building a laboratory, but a mainframe would be cooler.
 
-That's enough about me and my setup. What's your setup?
 
-[0]: http://usesthis.com/
-[1]: https://github.com/dconjar/dconjar
-[2]: http://www.alfredapp.com/powerpack/
-[3]: https://agilebits.com/onepassword
-[4]: http://world.std.com/~reinhold/diceware.html
-[5]: http://tom.preston-werner.com/2011/05/03/rejected-bio-from-the-setup.html
-[6]: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-[7]: http://www.sublimetext.com/
-[8]: https://www.google.com/intl/en/chrome/browser/
-[9]: http://vimium.github.io/
+
+
+
+
+
+
+[0]: http://www.akamai.com/html/about/press/releases/2009/press_091409.html
