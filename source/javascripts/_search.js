@@ -2,7 +2,7 @@
 
 var loadSearchBox = function () {
     $('.search-button').click(function () {
-        $('.masthead-search').toggle(1000)
+        $('#search').toggle(1000)
         $('.search-box input[type=text').focus()
     })
 }
