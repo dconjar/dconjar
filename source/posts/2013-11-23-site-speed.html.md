@@ -7,9 +7,9 @@ description: "On average, this site now loads in under half a second from most p
 
 Site speed matters. A lot. If you increase your website's page load speed by **50%**, **100%**, or (in my case) **640%**, good things will happen:
 
-* **Your bounce rate will drop**. [A study by Akamai][0] found that 40% of shoppers bounce by the third second of loading. People are far less likely to hit the back button when the site loads instantly.
+* **Your bounce rate will drop**. [A study by Akamai][0] found that 40% of shoppers bounce by the third second of loading. People are unlikely to hit the back button when the site loads instantly.
 * **Your engagement metrics will improve**. If your site takes more than a couple seconds to load, [visitors will view far less pages per visit][6].
-* **Your conversion rate will increase**. In [a survey of 60,000 consumers][9], 8% cited slow landing pages as a reasoning for abandoning their purchase.
+* **Your conversion rate will increase**. In [a survey of 60,000 consumers][9], 8% cited slow landing pages as a reason for abandoning their purchase.
 * **Your web traffic will increase**. Site speed is a [known Google ranking factor][7], and there seems to be a [correlation between server latency and Google ranking][8].
 
 How mere mortals boost their site speed
@@ -58,7 +58,7 @@ Every time a webpage loads, two things happen:
 1. The client sends a [request][3] to the server
 2. The server sends static content to the client
 
-When the client requests a static file, the server's job is very easy. It simply sends the static file to the client. Easy peasy.
+When the client requests a static file, the server's job is very easy. It simply sends the static file to the client.
 
 But sometimes the client requests something *dynamic*. **"Dynamic" means that the static content being requested doesn't exist**. Code needs to be executed on the server to create the static file and send it back to the client.
 
@@ -121,7 +121,7 @@ This was just one of many occasions in which I've had to fix "broken" CMS-powere
 Rethinking content management
 -----------------------------
 
-When we use complex content management systems and web frameworks, we're willing to accept the complexity. We assume that the benefits outweigh the cons.
+When we use complex content management systems and web frameworks, we're willing to accept the complexity. We assume that the benefits outweigh the costs.
 
 For a long time, they did. I graduated from building websites with static HTML in 2005. Content management systems were complex. But they were better than the alternative. I moved on, just like everyone else.
 
@@ -162,12 +162,12 @@ Anything dynamic can do, static can do better
 
 Middleman is written in Ruby. It takes the best parts of Rails and Padrino and combines them into a simple yet powerful system for building static websites.
 
-**It provides all the benefits of CMS, with none of the bloat**:
+**It provides all the benefits of a CMS, with none of the bloat**:
 
 * **Content management**. I write my blog posts in [Markdown][17]. If you need a WYSIWYG editor, [Prose.io][13] is a great one. It integrates with GitHub, so collaborating with multiple authors is painless.
-* **Less code duplication**. Middleman ships with [Tilt][14] and the [Rails Asset Pipeline][15]. It gives you all the best tools for development. Once you've built your first Middleman template, you'll dread returning to WordPress or Drupal.
+* **Less code duplication**. Middleman ships with [Tilt][14] and the [Rails Asset Pipeline][15]. Developing for Middleman is a joy. Once you've built your first template, you'll dread returning to WordPress or Drupal.
 * **A community**. Middleman is the only static site generator I know of that has a [community forum][15].
-* **A standardized way of doing things**. Rails developers feel right at home with Middleman. And we all know that Ruby on Rails is all about convention over configuration!
+* **A standardized way of doing things**. Rails developers feel right at home with Middleman. And Ruby on Rails is all about convention over configuration!
 * **Code sharing**. Middleman can be extended with [plugins][16].
 
 **Middleman is also really good at site speed optimization**:
@@ -192,7 +192,7 @@ That was tested from New York, but it's giving me the same results when I test i
 How to join the 1%
 ------------------
 
-Here's a quick rundown of everything I did to make my blog blazing fast:
+Here's a quick rundown of what I did to make my blog blazing fast:
 
 * I removed all the CSS and JavaScript code that wasn't being used (most of Twitter Bootstrap)
 * I combined my nine JavaScript files and 38 SCSS files into one JavaScript file and one CSS file using Sprockets and Sass.
@@ -207,11 +207,11 @@ If you want to see exactly how I did all that, you can [inspect my code on GitHu
 
 I'm working on an e-book that explains in detail how to optimize your site speed with Middleman.
 
-**The book will cover lots of other important stuff about building lightning-fast static sites**:
+**The book will also cover the nitty-gritty of how to build fast and profitable static sites**:
 
 * How to optimize your static site for search engines
 * How to add comments and social sharing buttons
-* How to make it easy for non-nerds to manage content
+* How to make it easy for the non-technical to manage content
 * How to use the Asset Pipeline, Sass and Bootstrap to rapidly build ambitious websites
 * Common mistakes people make when setting up Amazon Cloudfront, and how to avoid them
 
