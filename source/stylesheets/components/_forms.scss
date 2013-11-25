@@ -8,9 +8,13 @@
 .col-sidebar .form-subscribe {
     margin: 0;
     border: 0;
-    padding: 2em 1em 2em;
+
+    .form-group {
+        display: block;
+    }
 
     .btn {
-        margin-top: 0.6em;
+        width: 100%;
+        margin-top: 1em;
     }
 }
