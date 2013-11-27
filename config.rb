@@ -17,7 +17,7 @@ pages.each do |page_path|
   page = page_path.match(/.\/source\/pages\/([^\.]*)\..*/).captures[0]
 
   page  "/#{page}/*", :layout => :page
-  proxy "/#{page}/index.html", "/pages/#{page}.html"
+  proxy "/#{page}/index.html", "/pages/#{page}.html", :ignore => true
 end
 
 # Enable the official Middleman blogging extension
