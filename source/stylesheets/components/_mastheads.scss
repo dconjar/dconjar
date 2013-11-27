@@ -26,3 +26,9 @@
         margin-top: 0;
     }
 }
+
+@media (max-width: $screen-sm-min) {
+    .masthead {
+        display: none;
+    }
+}
