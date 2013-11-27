@@ -1,6 +1,6 @@
 <form class="form-inline form-subscribe" method="post" action="http://www.aweber.com/scripts/addlead.pl">
     <input type="hidden" name="listname" value="derekconjar">
-    <input type="hidden" name="redirect" value="http://derekconjar.com/thanks/for-subscribing.html">
+    <input type="hidden" name="redirect" value="http://www.derekconjar.com/thanks-for-subscribing/">
     <input type="hidden" name="meta_adtracking" value="custom form">
     <input type="hidden" name="meta_message" value="1"> 
     <input type="hidden" name="meta_required" value="email"> 
