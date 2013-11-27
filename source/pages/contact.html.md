@@ -5,7 +5,7 @@ title: "Contact Me"
 I'd love to hear from you! I respond to every email.
 
 <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=640341287f9a8c1f123b611d639c2c2a" method="post">
-    <input type='hidden' name='redirect_to' value='http://derekconjar.com/thanks/for-contacting.html'>
+    <input type='hidden' name='redirect_to' value='http://www.derekconjar.com/thanks-for-contacting/'>
 
     <div class="form-group">
         <label for="name">Name:</label>
