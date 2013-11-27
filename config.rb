@@ -62,6 +62,9 @@ configure :build do
   # Uglify the htmls with middleman-minify-html
   activate :minify_html
 
+  # Reduce image sizes with middleman-imageoptim
+  activate :imageoptim
+
   # Serve compressed files
   activate :gzip
 
