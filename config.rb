@@ -4,6 +4,7 @@
 
 page "*", :layout => :post
 page "/index.html", :layout => :two_columns
+page "/404.html", :layout => :two_columns
 page "/feed.xml", :layout => false
 page "/sitemap.xml", :layout => false
 
