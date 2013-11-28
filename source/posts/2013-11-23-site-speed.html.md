@@ -1,9 +1,9 @@
 ---
-title: "Site Speed Secrets: How I Made My Blog Faster Than 99% of Websites"
-description: "On average, this site now loads in under half a second from most places in the world. Your site can be just as fast. Here are the steps I took to achieve this massive speed boost."
+title: "Secrets of Site Speed Optimization: How I Joined the 1%"
+description: "It's time to unlearn everything you've ever been told about site speed optimization."
 ---
 
-> On average, **this site now loads in under half a second** from most places in the world. Your site can be just as fast, but it requires some out-of-the-box thinking.
+> On average, this site now loads in under half a second from most places in the world. Your site can be just as fast. Here are the steps I took to achieve this massive speed boost.
 
 Site speed matters. A lot. If you increase your website's page load speed by **50%**, **100%**, or (in my case) **640%**, good things will happen:
 
@@ -11,9 +11,6 @@ Site speed matters. A lot. If you increase your website's page load speed by **5
 * **Your engagement metrics will improve**. If your site takes more than a couple seconds to load, [visitors will view far less pages per visit][6].
 * **Your conversion rate will increase**. In [a survey of 60,000 consumers][9], 8% cited slow landing pages as a reason for abandoning their purchase.
 * **Your web traffic will increase**. Site speed is a [known Google ranking factor][7], and there seems to be a [correlation between server latency and Google ranking][8].
-
-How mere mortals boost their site speed
----------------------------------------
 
 There are many tried-and-true techniques for improving website performance.
 
