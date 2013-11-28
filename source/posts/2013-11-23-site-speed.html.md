@@ -3,7 +3,7 @@ title: "Secrets of Site Speed Optimization: How I Joined the 1%"
 description: "It's time to unlearn everything you've ever been told about site speed optimization."
 ---
 
-> On average, this site now loads in under half a second from most places in the world. Your site can be just as fast. Here are the steps I took to achieve this massive speed boost.
+> On average, this site now loads in under half a second from most places in the world. Your site can be just as fast. Here's how I did it.
 
 Site speed matters. A lot. If you increase your website's page load speed by **50%**, **100%**, or (in my case) **640%**, good things will happen:
 
